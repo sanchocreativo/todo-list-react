@@ -4,9 +4,16 @@
   text-align: center;
 }
 
+body{
+  background: #f5f6f7;
+}
+
 .todoList {
-  max-width: 300px;
+  max-width: 400px;
   margin: 1rem auto;
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px ;
 }
 
 .todo {
@@ -28,7 +35,13 @@
 .todoDelete {
   margin-left: auto;
 }
-
+.todoInput{
+  max-width: 400px;
+  margin: 1rem auto;
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px ;
+}
 .todoInput > * + * {
   margin-left: 0.5rem;
 }
