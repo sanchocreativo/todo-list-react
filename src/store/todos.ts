@@ -15,13 +15,21 @@ const todos = createSlice({
       state.push({ id: uuidv4(), message: action.payload, completed: false });
       return state;
     },
+    editTodo: (state, action: PayloadAction<Todo>) => {
+      const newMesage = state.find((todo) =>
+        todo.id === action.payload.id);
+      if (newMesage) {
+        newMesage.message = action.payload.message;
+      }
+      return state;
+    },
     deleteTodo: (state, action: PayloadAction<string>) =>
       state.filter(todo => todo.id !== action.payload),
     completeTodo: (state, action: PayloadAction<string>) => {
       const completedTodo = state.find(todo => todo.id === action.payload);
-        if(completedTodo){
-            completedTodo.completed = true;
-        }
+      if (completedTodo) {
+        completedTodo.completed = true;
+      }
       return state;
     },
     sort: state => state.sort((a, b) => a.message.localeCompare(b.message))

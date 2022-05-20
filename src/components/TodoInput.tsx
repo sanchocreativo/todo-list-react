@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import todos from "../store/todos";
-import { AppDispatch } from "../store/store";
+import {  AppDispatch } from "../store/store";
 
 const TodoInput: React.FC = () => {
   const dispatch: AppDispatch = useDispatch();
